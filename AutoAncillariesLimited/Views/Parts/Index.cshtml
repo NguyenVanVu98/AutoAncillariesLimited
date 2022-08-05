@@ -1,0 +1,105 @@
+﻿@model IEnumerable<AutoAncillariesLimited.Models.Part>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CarBrand.Country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Manufacturer.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Supplier.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CarName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnitPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Conditon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Image)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Image1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Image2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QtyInStock)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CarBrand.Country)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Manufacturer.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Supplier.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CarName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnitPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Conditon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Image)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Image1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Image2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QtyInStock)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PartId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PartId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PartId })
+        </td>
+    </tr>
+}
+
+</table>
